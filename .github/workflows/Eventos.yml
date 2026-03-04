@@ -3,8 +3,8 @@ on:
   push:
   repository_dispatch:
 jobs:
-  trabajos:
+  echo:
     runs-on: ubuntu-latest
     steps:
-      - name: echo-Show-Trigger
-        run: echo "ShowTrigger"
+      - name: Show-Trigger
+        run: echo "Event name: ${{ github.event_name }}"
